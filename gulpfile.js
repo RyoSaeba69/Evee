@@ -51,4 +51,4 @@ gulp.task('bower-files', function(){
         .pipe(gulp.dest('./public/lib'));
 });
 
-gulp.task('default', ['bower-files', 'gen-script-tags', 'gen-css-tags']);
+gulp.task('default', ['bower-files', 'gen-script-tags', 'gen-css-tags', 'gen-lib-tags']);
