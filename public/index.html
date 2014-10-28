@@ -15,19 +15,23 @@
     <script src="lib/angular-ui-router.js"></script>
     <script src="lib/angular-translate.js"></script>
     <script src="lib/angular-animate.js"></script>
+    <script src="lib/ui-bootstrap-tpls.js"></script>
     <!-- endinject -->
 
     <!-- inject:js -->
     <script src="evee/module.js"></script>
+    <script src="evee/configs/translations/jp_JP.js"></script>
     <script src="evee/configs/translations/fr_FR.js"></script>
     <script src="evee/configs/translations/en_US.js"></script>
-    <script src="evee/configs/configs.js"></script>
+    <script src="evee/directive/navMenu.js"></script>
+    <script src="evee/configs/routConfigs.js"></script>
     <!-- endinject -->
 </head>
 <body>
 
-<h1>Evee Index !</h1>
+<nav-menu></nav-menu>
 
+<h1>{{'APP_NAME' | translate}} Index !</h1>
 <div ui-view></div>
 
 </body>
