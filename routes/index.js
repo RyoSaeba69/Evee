@@ -7,7 +7,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.sendFile(__dirname + '/public/index.hmtl');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 module.exports = router;
