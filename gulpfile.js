@@ -15,9 +15,15 @@ var cssPaths = ['./public/lib/**/*.css', './public/**/*.css']
 
 gulp.task('gen-lib-tags', function(){
 
-    var libSources = gulp.src(jsLibPath);
+    var libSources = gulp.src([jsLibPath, '!./public/lib/**/angular.js']);
 
-    return indexPath.pipe(
+    return indexPath.pipe(inject(gulp.src('./public/lib/**/angular.js'),
+        {
+            ignorePath: '/public/',
+            addRootSlash: false,
+            name: 'angular'
+        }))
+        .pipe(
         inject(libSources.pipe(angularFilesort()),
             {
                 ignorePath: '/public/',
