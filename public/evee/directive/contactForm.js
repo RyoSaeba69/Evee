@@ -7,7 +7,11 @@ angular.module('evee')
             restrict:'E',
             templateUrl:'evee/templates/contactForm.html',
             link:function(scope){
+                scope.user = {name: '', email:'',message: ''}
 
+                scope.sendMail = function(user) {
+
+                };
             }
 
         }

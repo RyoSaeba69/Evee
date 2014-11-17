@@ -1,1 +1,21 @@
-BITE
+<div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form">
+                <div class="form-group">
+                    <label for="user_nom">{{'NAME' | translate}} : </label>
+                    <input id="user_nom" class="form-control" type="text" ng-model="user.name" required/>
+                </div>
+                <div class="form-group">
+                    <label for="user_mail"> E-mail :</label>
+                    <input id="user_mail" class="form-control" type="email" ng-model="user.email" required/>
+                </div>
+                <div class="form-group">
+                    <label for="user_message">Message :</label>
+                    <textarea id="user_message" rows="10" class="form-control"  ng-model="user.message"></textarea>
+                </div>
+                <button class="btn-lg btn-success btn-block" type="submit" ng-click="sendMail(user)">SEND</button>
+            </form>
+        </div>
+    </div>
+</div>
