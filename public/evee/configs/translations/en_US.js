@@ -15,7 +15,8 @@ angular.module('evee')
                 I_AM_THE_HOME: 'I am the home',
                 HELP: 'Help',
                 NAME: 'Name',
-                ABOUT: 'About'
+                ABOUT: 'About Evee',
+                HISTORY:'Project\'s History'
             });
         }
 

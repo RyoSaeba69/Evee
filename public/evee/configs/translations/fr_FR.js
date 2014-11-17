@@ -15,7 +15,8 @@ angular.module('evee')
                 I_AM_THE_HOME: 'Je suis la page d\'accueil',
                 HELP:  'Aide',
                 NAME: 'Nom',
-                ABOUT: ' À propos'
+                ABOUT: ' À propos de Evee',
+                HISTORY: 'Historique du projet'
             });
 
             $translateProvider.preferredLanguage('en');
