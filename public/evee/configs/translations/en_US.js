@@ -12,7 +12,8 @@ angular.module('evee')
                 FRENCH: 'French',
                 JAPANESE: 'Japanese',
                 LANGUAGES: 'Languages',
-                I_AM_THE_HOME: 'I am the home'
+                I_AM_THE_HOME: 'I am the home',
+                HELP: 'Help'
             });
         }
 

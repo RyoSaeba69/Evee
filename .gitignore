@@ -1,3 +1,9 @@
 # Created by .gitignore support plugin (hsz.mobi)
 node_modules
 bower_components
+.idea
+
+*.log
+
+public/lib/*.js
+public/lib/*.less

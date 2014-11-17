@@ -12,4 +12,14 @@ angular.module('evee')
                     url: '/home',
                     templateUrl: 'views/home.html'
                 })
+
+                .state('help', {
+                    url: '/help',
+                    templateUrl: 'views/help.html'
+                })
+
+                .state('contact', {
+                    url: '/contact',
+                    templateUrl: 'views/contact.html'
+                })
         }]);

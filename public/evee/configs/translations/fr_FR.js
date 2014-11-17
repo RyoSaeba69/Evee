@@ -12,7 +12,8 @@ angular.module('evee')
                 FRENCH: 'Français',
                 JAPANESE: 'Japonais',
                 LANGUAGES: 'Langues',
-                I_AM_THE_HOME: 'Je suis la page d\'accueil'
+                I_AM_THE_HOME: 'Je suis la page d\'accueil',
+                HELP:  'Aide'
             });
 
             $translateProvider.preferredLanguage('en');
