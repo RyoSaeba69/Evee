@@ -13,7 +13,7 @@ angular.module('evee')
                 JAPANESE: 'Japanese',
                 LANGUAGES: 'Languages',
                 I_AM_THE_HOME: 'I am the home',
-                HELP: 'Help'
+                Connection:'Connection'
             });
         }
 

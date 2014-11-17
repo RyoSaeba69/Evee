@@ -13,7 +13,7 @@ angular.module('evee')
                 JAPANESE: 'Japonais',
                 LANGUAGES: 'Langues',
                 I_AM_THE_HOME: 'Je suis la page d\'accueil',
-                HELP:  'Aide'
+                Connection:'Connexion'
             });
 
             $translateProvider.preferredLanguage('en');
