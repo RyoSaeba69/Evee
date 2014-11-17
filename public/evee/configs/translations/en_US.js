@@ -19,7 +19,9 @@ angular.module('evee')
                 HELP: 'Help',
                 NAME: 'Name',
                 ABOUT: 'About Evee',
-                HISTORY:'Project\'s History'
+                HISTORY:'Project\'s History',
+                DATA: 'Use of personal data',
+                LEGAL: 'Legal notices'
             });
         }
 

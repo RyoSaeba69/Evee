@@ -19,7 +19,9 @@ angular.module('evee')
                 HELP:  'Aide',
                 NAME: 'Nom',
                 ABOUT: ' À propos de Evee',
-                HISTORY: 'Historique du projet'
+                HISTORY: 'Historique du projet',
+                DATA: 'Traitement des données personnelles',
+                LEGAL:'Mentions légales'
             });
 
             $translateProvider.preferredLanguage('en');

@@ -30,4 +30,8 @@ angular.module('evee')
                     url: '/date',
                     templateUrl: 'views/data.html'
                 })
+                .state('legal', {
+                    url: '/legal',
+                    templateUrl: 'views/legal.html'
+                })
         }]);
