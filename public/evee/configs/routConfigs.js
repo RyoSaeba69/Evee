@@ -26,4 +26,8 @@ angular.module('evee')
                     url: '/about',
                     templateUrl: 'views/about.html'
                 })
+                .state('data', {
+                    url: '/date',
+                    templateUrl: 'views/data.html'
+                })
         }]);
