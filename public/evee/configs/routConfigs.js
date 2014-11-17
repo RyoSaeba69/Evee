@@ -17,4 +17,9 @@ angular.module('evee')
                     url: '/help',
                     templateUrl: 'views/help.html'
                 })
+
+                .state('contact', {
+                    url: '/contact',
+                    templateUrl: 'views/contact.html'
+                })
         }]);
