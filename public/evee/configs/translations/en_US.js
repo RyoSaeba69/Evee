@@ -14,7 +14,8 @@ angular.module('evee')
                 LANGUAGES: 'Languages',
                 I_AM_THE_HOME: 'I am the home',
                 HELP: 'Help',
-                NAME: 'Name'
+                NAME: 'Name',
+                ABOUT: 'About'
             });
         }
 

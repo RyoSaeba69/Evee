@@ -14,7 +14,8 @@ angular.module('evee')
                 LANGUAGES: 'Langues',
                 I_AM_THE_HOME: 'Je suis la page d\'accueil',
                 HELP:  'Aide',
-                NAME: 'Nom'
+                NAME: 'Nom',
+                ABOUT: ' À propos'
             });
 
             $translateProvider.preferredLanguage('en');
