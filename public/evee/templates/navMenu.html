@@ -42,7 +42,7 @@
 
 
                 <a ng-if="!menu.subMenus && !menu.menuClick" ui-sref="{{menu.state}}">{{ menu.name | translate}}</a>
-                <a ng-if="menu.menuClick" ng-click="menu.menuClick()">{{ menu.name | translate}}</a>
+                <a ng-if="menu.menuClick" href="" ng-click="menu.menuClick()">{{ menu.name | translate}}</a>
 
                 <a href="" class="dropdown-toggle" data-toggle="dropdown" ng-if="menu.subMenus">
                     {{menu.name | translate}}

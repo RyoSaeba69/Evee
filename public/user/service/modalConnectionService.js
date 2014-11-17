@@ -8,7 +8,7 @@ angular.module('evee.user')
                 return $modal.open({
                     templateUrl: "user/templates/modalConnection.html",
                     controller: "modalConnection",
-                    size: 'lg'
+                    size: ''
                 });
             }
         };

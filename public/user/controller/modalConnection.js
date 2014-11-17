@@ -5,8 +5,6 @@ angular.module('evee.user')
     .controller('modalConnection', ["$scope", "$modal", "$modalInstance",
         function ($scope, $modal, $modalInstance) {
 
-            $scope.items = ['item1', 'item2', 'item3'];
-
             $scope.open = function (size) {
 
                 var modalInstance = $modal.open({

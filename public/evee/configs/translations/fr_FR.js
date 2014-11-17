@@ -13,6 +13,9 @@ angular.module('evee')
                 JAPANESE: 'Japonais',
                 LANGUAGES: 'Langues',
                 I_AM_THE_HOME: 'Je suis la page d\'accueil',
+                CONNECTION:'Connexion',
+                MAIL:'Adresse mail',
+                PASSWORD:'Mot de passe',
                 HELP:  'Aide',
                 NAME: 'Nom',
                 ABOUT: ' À propos'
