@@ -25,9 +25,11 @@ angular.module('evee')
 
                     scope.rightMenus = [
                         {name: 'Right is better !', state: 'home'},
-                        {name: 'Connection', menuClick: function() {
+                        {
+                            name: 'CONNECTION', menuClick: function () {
                             modalConnectionService.open();
-                        }},
+                        }
+                        },
                         {
                             name: 'User',
                             subMenus: [{name: 'Profile', state: 'home'}, {name: 'Hour', state: 'home'}]
@@ -47,7 +49,9 @@ angular.module('evee')
                     };
 
                     scope.setActive = function (menu) {
-
+                        if (!menu.state) {
+                            return;
+                        }
                         if (currentActive) {
                             currentActive.isActive = false;
                         }
