@@ -21,7 +21,8 @@ angular.module('evee')
                 ABOUT: 'About Evee',
                 HISTORY:'Project\'s History',
                 DATA: 'Use of personal data',
-                LEGAL: 'Legal notices'
+                LEGAL: 'Legal notices',
+                CONTACT: 'Contact us'
             });
         }
 

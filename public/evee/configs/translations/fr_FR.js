@@ -21,7 +21,8 @@ angular.module('evee')
                 ABOUT: ' À propos de Evee',
                 HISTORY: 'Historique du projet',
                 DATA: 'Traitement des données personnelles',
-                LEGAL:'Mentions légales'
+                LEGAL:'Mentions légales',
+                CONTACT: 'Nous contacter'
             });
 
             $translateProvider.preferredLanguage('en');
