@@ -25,7 +25,9 @@ angular.module('evee')
                 CONTACT: 'Contact us',
                 SEND: 'SEND',
                 CONTACT_MAIL: 'Contact us by email',
-                CONTACT_FORM: 'Contact us by online form'
+                CONTACT_FORM: 'Contact us by online form',
+                HOME: 'Home',
+                USER: 'User'
             });
         }
 

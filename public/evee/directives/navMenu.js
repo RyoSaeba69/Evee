@@ -14,25 +14,19 @@ angular.module('evee')
                     var currentActive = null;
 
                     scope.leftMenus = [
-                        {name: 'A menu', state: 'home'},
-                        {name: 'Active One !', state: 'home'},
-                        {name: 'Son Goku :)', state: 'home'},
-                        {
-                            name: 'Crazy menu ! ',
-                            subMenus: [{name: 'A sub', state: 'home'}, {name: 'subway', state: 'home'}]
-                        }
+                        {name: 'HOME', state: 'home'},
+
                     ];
 
                     scope.rightMenus = [
-                        {name: 'Right is better !', state: 'home'},
                         {
                             name: 'CONNECTION', menuClick: function () {
                             modalConnectionService.open();
                         }
                         },
                         {
-                            name: 'User',
-                            subMenus: [{name: 'Profile', state: 'home'}, {name: 'Hour', state: 'home'}]
+                            name: 'USER',
+                            subMenus: [{name: 'Profil', state: 'home'}, {name: 'Hour', state: 'home'}]
                         },
                         {
                             name: 'LANGUAGES',

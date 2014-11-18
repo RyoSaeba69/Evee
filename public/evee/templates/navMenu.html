@@ -33,9 +33,7 @@
 
             </li>
         </ul>
-        <form class="navbar-form navbar-left">
-            <input type="text" class="form-control col-lg-8" placeholder="Search">
-        </form>
+
         <ul class="nav navbar-nav navbar-right">
             <li ng-repeat="menu in rightMenus" ng-class="{active: menu.isActive, dropdown: menu.subMenus}"
                 ng-click="setActive(menu)">
