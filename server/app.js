@@ -15,7 +15,7 @@ var app = express();
 //app.set('views', path.join(__dirname, 'public'));
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, '../public/ressources/images/logo.png')));
+app.use(favicon(path.join(__dirname, '../public/ressources/images/logo2.png')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

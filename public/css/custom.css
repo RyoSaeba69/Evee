@@ -1,3 +1,12 @@
+/* navbar-right */
+
+@media (min-width: 768px) {
+    .navbar-right {
+        margin-right: 0px;
+        padding-right: 15px;
+    }
+}
+
 /* footer */
 
 footer {
@@ -9,7 +18,7 @@ footer {
 
 footer a {
     color: #ffffff;
-   font-size: 86%;
+    font-size: 86%;
 }
 
 footer a:hover {
