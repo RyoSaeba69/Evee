@@ -22,7 +22,10 @@ angular.module('evee')
                 HISTORY:'Project\'s History',
                 DATA: 'Use of personal data',
                 LEGAL: 'Legal notices',
-                CONTACT: 'Contact us'
+                CONTACT: 'Contact us',
+                SEND: 'SEND',
+                CONTACT_MAIL: 'Contact us by email',
+                CONTACT_FORM: 'Contact us by online form'
             });
         }
 

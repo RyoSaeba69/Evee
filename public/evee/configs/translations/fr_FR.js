@@ -22,10 +22,13 @@ angular.module('evee')
                 HISTORY: 'Historique du projet',
                 DATA: 'Traitement des données personnelles',
                 LEGAL:'Mentions légales',
-                CONTACT: 'Nous contacter'
+                CONTACT: 'Nous contacter',
+                SEND: 'ENVOYER',
+                CONTACT_MAIL: 'Nous contacter par mail',
+                CONTACT_FORM: 'Nous contacter via le formulaire en ligne'
             });
 
-            $translateProvider.preferredLanguage('en');
+            $translateProvider.preferredLanguage('fr');
 
         }
 
