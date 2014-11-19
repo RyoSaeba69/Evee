@@ -288,7 +288,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: carousel.js v3.3.1
+ * Bootstrap: eveeCarousel.js v3.3.1
  * http://getbootstrap.com/javascript/#carousel
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
