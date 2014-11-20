@@ -1,3 +1,7 @@
+/* Universal */
+.center {
+    text-align: center;
+}
 /* navbar-right */
 
 @media (min-width: 768px) {

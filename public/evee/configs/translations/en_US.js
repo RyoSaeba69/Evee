@@ -28,7 +28,11 @@ angular.module('evee')
                 CONTACT_FORM: 'Contact us by online form',
                 HOME: 'Home',
                 USER: 'User',
-                ENGAGEMENT: 'Nos engagements'
+                ENGAGEMENT: 'Nos engagements',
+                WELCOME: 'Welcome to Evee',
+                HOME_TEXT: 'This is the home page for the application of events management,',
+                SIGN_UP: 'Sign up now!'
+
             });
         }
 
