@@ -28,7 +28,10 @@ angular.module('evee')
                 CONTACT_FORM: 'Nous contacter via le formulaire en ligne',
                 HOME: 'Accueil',
                 USER: 'Utilisateur',
-                ENGAGEMENT: 'Nos engagements'
+                ENGAGEMENT: 'Nos engagements',
+                WELCOME: 'Bienvenue dans Evee',
+                HOME_TEXT: 'Ceci est la page d\'accueil pour l\'application de gestion d\'événements,',
+                SIGN_UP: 'Inscription'
             });
 
             $translateProvider.preferredLanguage('fr');
