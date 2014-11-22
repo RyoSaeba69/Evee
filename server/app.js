@@ -11,18 +11,19 @@ var routes = require('./routes/index');
 
 var app = express();
 
-// view engine setup
-//app.set('views', path.join(__dirname, 'public'));
-
-// uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, '../public/ressources/images/logo2.png')));
+app.use(favicon(path.join(__dirname, '../public/ressources/images/logo.png')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
+// routing
 app.use('/', routes);
+
+
+// database
+require('./database/initDb')();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
