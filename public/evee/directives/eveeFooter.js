@@ -3,14 +3,14 @@
  */
 
 angular.module('evee')
-    .directive('eveeFooter', function(){
-        return{
-            restrict:'E',
-            templateUrl:'evee/templates/eveeFooter.html',
-            link:function(scope){
+    .directive('eveeFooter', [
+        function () {
+            return {
+                restrict: 'E',
+                templateUrl: 'evee/templates/eveeFooter.html',
+                link: function (scope) {
+                }
 
             }
-
-        }
-    });
+        }]);
 
