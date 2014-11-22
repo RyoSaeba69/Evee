@@ -9,7 +9,15 @@ var initUserRouter = function (app) {
 
     var usersRouter = express.Router();
 
-    usersRouter.get('/findAll', usersService.findAll);
+    usersRouter.get('/findAll', function(req, res){
+        usersService.findAll(function(err, users){
+            if(err){
+                res.send(err);
+            } else {
+                res.json(users);
+            }
+        });
+    });
 
     app.use('/users', usersRouter);
 

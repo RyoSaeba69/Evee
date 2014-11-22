@@ -20,10 +20,10 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // routing
 app.use('/', routes);
-
+require('./init/initDbRouters')(app);
 
 // database
-require('./database/initDb')();
+require('./init/initDb')();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

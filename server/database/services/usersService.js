@@ -6,14 +6,8 @@ var User = require('../models/User');
 
 var usersService = {
     
-    findAll: function (req, res) {
-        User.find(function(err, users){
-            if(err){
-                res.send(err)
-            } else {
-                res.json(users);
-            }
-        });
+    findAll: function (callback) {
+        User.find(callback);
     }
     
 };
