@@ -43,7 +43,7 @@
                 <a ng-if="menu.menuClick" href="" ng-click="menu.menuClick()">{{ menu.name | translate}}</a>
 
                 <a href="" class="dropdown-toggle" data-toggle="dropdown" ng-if="menu.subMenus">
-                    {{menu.name | translate}}
+                    <span ng-hide="menu.icon">{{menu.name | translate}}</span><i ng-show="menu.icon" class="{{menu.icon}}"></i>
                     <span class="caret"></span>
                 </a>
 

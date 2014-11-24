@@ -26,10 +26,12 @@ angular.module('evee')
                         },
                         {
                             name: 'USER',
+                            icon:'fa fa-user',
                             subMenus: [{name: 'Profil', state: 'home'}, {name: 'Hour', state: 'home'}]
                         },
                         {
                             name: 'LANGUAGES',
+                            icon:'fa fa-flag',
                             subMenus: [{name: 'FRENCH', langId: 'fr'}, {
                                 name: 'ENGLISH',
                                 langId: 'en'

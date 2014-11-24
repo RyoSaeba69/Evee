@@ -4618,6 +4618,7 @@ a.badge:focus {
 }
 .jumbotron {
   padding: 30px 15px;
+  margin-top:-10px; /* ADD bu Jérémy le 24/11 pour coller la boite au menu du haut */
   margin-bottom: 30px;
   color: inherit;
   background-color: #4e5d6c;
