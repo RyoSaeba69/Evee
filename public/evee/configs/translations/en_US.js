@@ -33,7 +33,8 @@ angular.module('evee')
                 ENGAGEMENT: 'Nos engagements',
                 WELCOME: 'Welcome to Evee',
                 HOME_TEXT: 'This is the home page for the application of events management,',
-                SIGN_UP: 'Sign up now!'
+                SIGN_UP: 'Sign up now!',
+                REGISTRATION:'Registration'
 
             });
         }

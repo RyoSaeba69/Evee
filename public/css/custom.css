@@ -2,6 +2,18 @@
 .center {
     text-align: center;
 }
+
+.right {
+    text-align:right;
+}
+
+.orange {
+    color : #df691a;
+}
+
+.red {
+    color : red;
+}
 /* navbar-right */
 
 @media (min-width: 768px) {
@@ -34,10 +46,6 @@ h2 {
     padding-top:5px;
     border-top:1px solid #df691a;
     padding-bottom:10px;
-}
-
-.orange {
-    color : #df691a;
 }
 
 strong {

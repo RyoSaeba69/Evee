@@ -34,4 +34,8 @@ angular.module('evee')
                     url: '/legal',
                     templateUrl: 'views/legal.html'
                 })
+                .state('registration', {
+                    url: '/registration',
+                    templateUrl: 'views/registration.html'
+                })
         }]);

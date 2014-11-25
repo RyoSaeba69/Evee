@@ -33,7 +33,8 @@ angular.module('evee')
                 ENGAGEMENT: 'Nos engagements',
                 WELCOME: 'Bienvenue dans Evee',
                 HOME_TEXT: 'Ceci est la page d\'accueil pour l\'application de gestion d\'événements,',
-                SIGN_UP: 'Inscription'
+                SIGN_UP: 'Inscription',
+                REGISTRATION:'Inscription'
             });
 
             $translateProvider.preferredLanguage('fr');
