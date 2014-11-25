@@ -23,7 +23,7 @@ angular.module('evee')
                 DATA: 'Use of personal data',
                 LEGAL: 'Legal notices',
                 CONTACT: 'Contact us',
-                SEND: 'SEND',
+                SEND: 'Send',
                 CONTACT_MAIL: 'Contact us by email',
                 CONTACT_FORM: 'Contact us by online form',
                 HOME: 'Home',
