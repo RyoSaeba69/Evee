@@ -8,6 +8,11 @@ var usersService = {
     
     findAll: function (callback) {
         User.find(callback);
+    },
+
+    save: function (user, callback) {
+        var newUser = new User(user);
+        newUser.save(callback);
     }
     
 };

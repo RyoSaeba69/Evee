@@ -19,6 +19,16 @@ var initUserRouter = function (app) {
         });
     });
 
+    usersRouter.post('/save', function (req, res) {
+        usersService.save(req.body.data, function (err, newUser) {
+           if(err){
+               res.send(err);
+           } else {
+               res.json({success: true});
+           }
+        });
+    });
+
     app.use('/users', usersRouter);
 
 };
