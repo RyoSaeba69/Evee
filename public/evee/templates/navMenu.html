@@ -21,32 +21,25 @@
 
                 <ul class="dropdown-menu" role="menu" ng-if="menu.subMenus">
                     <li ng-repeat="menu in menu.subMenus">
-
                         <a ui-sref="{{menu.state}}" ng-if="!menu.langId">{{menu.name | translate}}</a>
 
                         <a href="" ng-if="menu.langId" ng-click="changeLanguage(menu.langId)">
                             {{menu.name | translate}}
                         </a>
-
                     </li>
                 </ul>
-
             </li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
             <li ng-repeat="menu in rightMenus" ng-class="{active: menu.isActive, dropdown: menu.subMenus}"
                 ng-click="setActive(menu)">
-
-
                 <a ng-if="!menu.subMenus && !menu.menuClick" ui-sref="{{menu.state}}">{{ menu.name | translate}}</a>
                 <a ng-if="menu.menuClick" href="" ng-click="menu.menuClick()">{{ menu.name | translate}}</a>
-
                 <a href="" class="dropdown-toggle" data-toggle="dropdown" ng-if="menu.subMenus">
                     <span ng-hide="menu.icon">{{menu.name | translate}}</span><i ng-show="menu.icon" class="{{menu.icon}}"></i>
                     <span class="caret"></span>
                 </a>
-
                 <ul class="dropdown-menu" role="menu" ng-if="menu.subMenus">
                     <li ng-repeat="menu in menu.subMenus">
                         <a ui-sref="{{menu.state}}" ng-if="!menu.langId">{{menu.name | translate}}</a>
@@ -55,7 +48,6 @@
                         </a>
                     </li>
                 </ul>
-
             </li>
         </ul>
     </div>
