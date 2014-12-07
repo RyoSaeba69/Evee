@@ -2,25 +2,33 @@
  * Created by antoine on 10/20/14.
  */
 var express = require('express');
+var expressSession = require('express-session');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
+var passport = require('passport');
+//var LocalStrategy = require('passport-local').Strategy;
 
 var app = express();
 
 app.use(favicon(path.join(__dirname, '../public/ressources/images/logo.png')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(expressSession({ secret: 'keyboard cat' }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./configs/passport')(passport);
 
 // routing
 app.use('/', routes);
-require('./init/initDbRouters')(app);
+require('./init/initDbRouters')(app, passport);
 
 // database
 require('./init/initDb')();

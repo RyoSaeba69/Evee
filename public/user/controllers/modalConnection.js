@@ -2,8 +2,8 @@
  * Created by Jean-François on 17/11/2014.
  */
 angular.module('evee.user')
-    .controller('modalConnection', ["$scope", "$modal", "$modalInstance",
-        function ($scope, $modal, $modalInstance) {
+    .controller('modalConnection', ["$scope", "$modal", "$modalInstance", 'eveeHttp', 'authService',
+        function ($scope, $modal, $modalInstance, eveeHttp, authService) {
 
             $scope.open = function (size) {
 
@@ -20,7 +20,19 @@ angular.module('evee.user')
                 });
             };
 
-            $scope.ok = function () {
+            $scope.connect = function () {
+
+                eveeHttp.postForm('users/login', $scope.user)
+                    .success(function(data, statut, headers, config){
+
+                        eveeHttp.get('users/successlogin')
+                            .success(function(data, statut, headers, config){
+                                if(data) {
+                                    authService.setUser(data);
+                                }
+                            });
+                    });
+
                 $modalInstance.dismiss('cancel');
                 console.log("Test username : " + $scope.user.name + " test mdp : " + $scope.user.password);
             };
