@@ -34,6 +34,8 @@ angular.module('evee.user')
                     });
 
                 $modalInstance.dismiss('cancel');
+
+                //TODO a retirer une fois tests terminer
                 console.log("Test username : " + $scope.user.name + " test mdp : " + $scope.user.password);
             };
 

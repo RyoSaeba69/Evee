@@ -23,17 +23,6 @@
     }
 }
 
-/* modal */
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1040;
-    background-color: #000000;
-}
-
 /* div.container */
 div.container {
     /*border-left: 1px solid #eaeaea;*/
@@ -50,6 +39,17 @@ h2 {
 
 strong {
     color : #df691a;
+}
+
+/* modal */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000000;
 }
 
 /* input */
