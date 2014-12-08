@@ -19,11 +19,11 @@ angular.module('evee')
                     ];
 
                     scope.rightMenus = [
-                        {
-                            name: 'CONNECTION', menuClick: function () {
-                            modalConnectionService.open();
-                        }
-                        },
+                        //{
+                        //    name: 'CONNECTION', menuClick: function () {
+                        //    modalConnectionService.open();
+                        //}
+                        //},
                         {
                             name: 'USER',
                             icon:'fa fa-user',

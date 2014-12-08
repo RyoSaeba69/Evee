@@ -27,6 +27,10 @@ var initUserRouter = function (app, passport) {
         res.json({isAuthenticated: false});
     });
 
+    usersRouter.get('/logout', function (req, res) {
+        req.logout();
+        res.send(true);
+    });
 
     usersRouter.get('/findAll', function(req, res){
         usersService.findAll(function(err, users){

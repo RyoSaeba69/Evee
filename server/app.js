@@ -10,6 +10,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var passport = require('passport');
+
+var mongoose = require('mongoose');
 //var LocalStrategy = require('passport-local').Strategy;
 
 var app = express();
@@ -24,14 +26,17 @@ app.use(expressSession({ secret: 'keyboard cat' }));
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use('/', routes);
+
 require('./configs/passport')(passport);
 
-// routing
-app.use('/', routes);
-require('./init/initDbRouters')(app, passport);
 
 // database
-require('./init/initDb')();
+require('./init/initDb')(function () {});
+
+// routing
+require('./init/initDbRouters')(app, passport);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -6,7 +6,7 @@
 
 var dbConfigs = {
 
-    connectionString: 'mongodb://localhost/evee' // evee.xyz
+    connectionString: 'mongodb://localhost/eveetest' // evee.xyz
 
 };
 
