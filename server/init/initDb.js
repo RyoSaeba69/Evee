@@ -11,11 +11,13 @@ var initDb = function(){
 
     var eveedDb = mongoose.connection;
 
+    eveedDb.once('open', function () {
+        console.log('Connected to mongoDB !!!');
+    });
+
     eveedDb.on('error', console.error.bind(console, 'connection mongodb error:'));
 
-    eveedDb.once('open', function () {
-        console.log('Connected to DB !!!');
-    });
+
 
 };
 
