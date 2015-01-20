@@ -36,8 +36,10 @@ angular.module('evee')
                 SIGN_UP: 'Inscription',
                 REGISTRATION:'Inscription',
                 LOG_IN: 'Connexion',
-                LOG_OUT: 'Deconnexion',
-                CREATE_NEW_EVENT: 'Créer un nouvel evenement'
+                LOG_OUT: 'Déconnexion',
+                CREATE_NEW_EVENT: 'Créer un nouvel événement',
+                TITLE:'Titre',
+                DESCRIPTION:'Description'
             });
 
             $translateProvider.preferredLanguage('fr');
