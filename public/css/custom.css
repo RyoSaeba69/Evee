@@ -107,7 +107,18 @@ footer ul li {
 }
 
 /* event */
+.titleEvent {
+    border-top:1px solid #df691a;
+    margin-top:21px;
+}
+
+.thumbnailEvent {
+    margin-top:5px;
+}
+
 .h2titleEvent {
+    border-top:none;
+    margin-top:0px;
     padding-bottom: 0px;
     font-weight: 400;
 }
@@ -116,11 +127,12 @@ footer ul li {
     float:right;
     margin-top:10px;
     margin-right:10px;
-
+    color:#df691a;
 }
 
 .h4dateEvent {
     color: #7ec7ff;
+    margin-top:0px;
 }
 
 .h4descriptionEvent {
