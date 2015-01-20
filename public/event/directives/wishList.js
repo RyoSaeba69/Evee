@@ -1,5 +1,5 @@
 /**
- * Created by quentin on 19/01/15.
+ * Created by quentin on 20/01/15.
  */
 angular.module('event')
     .directive('wishList', function(){
