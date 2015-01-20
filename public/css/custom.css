@@ -105,3 +105,24 @@ footer ul li {
 .default-evee-loader{
     color: #449d44;
 }
+
+/* event */
+.h2titleEvent {
+    padding-bottom: 0px;
+    font-weight: 400;
+}
+
+.h3typeEvent {
+    float:right;
+    margin-top:10px;
+    margin-right:10px;
+
+}
+
+.h4dateEvent {
+    color: #7ec7ff;
+}
+
+.h4descriptionEvent {
+    width: 80%;
+}

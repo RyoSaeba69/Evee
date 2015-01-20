@@ -38,4 +38,8 @@ angular.module('evee')
                     url: '/registration',
                     templateUrl: 'views/registration.html'
                 })
+                .state('event', {
+                    url:'/event',
+                    templateUrl: 'views/ihmEvent.html'
+                })
         }]);
