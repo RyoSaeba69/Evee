@@ -1,0 +1,19 @@
+<div>
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span><span
+                class="sr-only">{{'CLOSE' | translate}}</span></button>
+    </div>
+    <div class="modal-body">
+        <input type="text" class="form-control" ng-model="event.title" placeholder="{{ 'TITLE' | translate}}"><br/>
+        <textarea ng-model="event.description" placeholder="{{'DESCRIPTION' | translate}}"></textarea>
+        <select>
+            <option value="1">Type 1</option>
+            <option value="2">Type 2</option>
+            <option value="3">Type 3</option>
+        </select>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="createNewEvent()">{{'CREATE_NEW_EVENT'|translate}}</button>
+        <button class="btn btn-default" ng-click="cancel()">{{'CANCEL'|translate}}</button>
+    </div>
+</div>

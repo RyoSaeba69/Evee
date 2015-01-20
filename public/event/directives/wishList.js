@@ -1,7 +1,7 @@
 /**
  * Created by quentin on 20/01/15.
  */
-angular.module('event')
+angular.module('evee.event')
     .directive('wishList', function(){
         return{
             restrict:'E',

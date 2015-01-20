@@ -36,7 +36,8 @@ angular.module('evee')
                 SIGN_UP: 'Sign up now!',
                 REGISTRATION:'Registration',
                 LOG_IN: 'Log in',
-                LOG_OUT: 'Log out'
+                LOG_OUT: 'Log out',
+                CREATE_NEW_EVENT: 'Create new event'
 
             });
         }
