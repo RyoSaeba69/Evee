@@ -18,7 +18,7 @@
 
 @media (min-width: 768px) {
     .navbar-right {
-        margin-right: 0px;
+        margin-right: 0;
         padding-right: 15px;
     }
 }
@@ -118,8 +118,8 @@ footer ul li {
 
 .h2titleEvent {
     border-top:none;
-    margin-top:0px;
-    padding-bottom: 0px;
+    margin-top:0;
+    padding-bottom: 0;
     font-weight: 400;
 }
 
@@ -132,7 +132,7 @@ footer ul li {
 
 .h4dateEvent {
     color: #7ec7ff;
-    margin-top:0px;
+    margin-top:0;
 }
 
 .h4descriptionEvent {
