@@ -39,7 +39,11 @@ angular.module('evee')
                     templateUrl: 'views/registration.html'
                 })
                 .state('event', {
-                    url:'/event',
-                    templateUrl: 'views/ihmEvent.html'
+                    url: '/event/:eventId',
+                    templateUrl: 'views/ihmEvent.html',
+                    controller: ['$scope', '$stateParams',
+                        function ($scope, $stateParams) {
+                            $scope.eventId = $stateParams.eventId;
+                        }]
                 })
         }]);
