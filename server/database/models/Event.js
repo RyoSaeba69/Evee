@@ -19,7 +19,7 @@ var eventSchema = new Schema({
     admins: [Schema.Types.ObjectId],
     users: [Schema.Types.ObjectId],
     type: Schema.Types.ObjectId,
-    modules: [String],
+    modules: [Schema.Types.Mixed],
     public: Boolean
 });
 

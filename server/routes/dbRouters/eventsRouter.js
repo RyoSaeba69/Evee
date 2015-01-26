@@ -4,8 +4,8 @@
 
 
 var express = require('express');
-var usersService = require('../../database/services/eventsService');
-var initUserRouter = function (app, passport) {
+var eventsService = require('../../database/services/eventsService');
+var initEventRouter = function (app, passport) {
 
     var eventsRouter = express.Router();
 
@@ -29,8 +29,18 @@ eventsRouter.get('/findAll', function(req, res){
         });
     });
 
+    eventsRouter.post('/findEvent', function (req, res) {
+        eventsService.findById(req.body.data.eventId, function (err, foundEvent) {
+            if(err){
+                res.send(err);
+            } else {
+                res.json(foundEvent);
+            }
+        });
+    });
+
     app.use('/events', eventsRouter);
 
 };
 
-module.exports = initUserRouter;
+module.exports = initEventRouter;

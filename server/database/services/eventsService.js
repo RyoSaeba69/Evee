@@ -13,6 +13,11 @@ var eventsService = {
     save: function (event, callback) {
         var newEvent = new Event(event);
         newEvent.save(callback);
+    },
+    
+    findById: function (id, callback) {
+        Event.findById(id)
+            .exec(callback);
     }
 
 };
