@@ -12,7 +12,7 @@ angular.module('evee.test')
                 options: '='
             },
             link: function (scope) {
-                console.log('SCOPE OPTIONS ', scope.options);
+                //console.log('SCOPE OPTIONS ', scope.options);
             }
         }
 

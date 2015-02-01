@@ -13,7 +13,6 @@ angular.module('evee.event')
                 },
                 link: function (scope, element) {
 
-                    console.log('OPTIONS ', scope.options);
                     var dirToCompile = '<'+scope.directiveName+' options="options">'
                         +'</'+scope.directiveName+'>';
 

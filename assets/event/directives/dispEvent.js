@@ -3,8 +3,8 @@
  */
 
 angular.module('evee.event')
-    .directive('dispEvent', ['eveeHttp',
-        function (eveeHttp) {
+    .directive('dispEvent', ['Event',
+        function (Event) {
             return {
                 restrict: 'E',
                 scope: {
@@ -12,13 +12,8 @@ angular.module('evee.event')
                 },
                 templateUrl: 'event/templates/dispEvent.html',
                 link: function (scope) {
-                    eveeHttp.post('events/findEvent', {
-                        data: {
-                            eventId: scope.eventId
-                        }
-                    }).success(function (foundEvent) {
-                       console.log('FOUND EVENT ', foundEvent);
-                        scope.event = foundEvent;
+                    scope.event = Event.get({eventId: scope.eventId}, function () {
+                        console.log('Event fetched ! :)');
                     });
                 }
             };
