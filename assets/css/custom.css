@@ -4,16 +4,17 @@
 }
 
 .right {
-    text-align:right;
+    text-align: right;
 }
 
 .orange {
-    color : #df691a;
+    color: #df691a;
 }
 
 .red {
-    color : red;
+    color: red;
 }
+
 /* navbar-right */
 
 @media (min-width: 768px) {
@@ -32,13 +33,13 @@ div.container {
 
 /* font */
 h2 {
-    padding-top:5px;
-    border-top:1px solid #df691a;
-    padding-bottom:10px;
+    padding-top: 5px;
+    border-top: 1px solid #df691a;
+    padding-bottom: 10px;
 }
 
 strong {
-    color : #df691a;
+    color: #df691a;
 }
 
 /* modal */
@@ -66,12 +67,12 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 }
 
 textarea {
-    resize:vertical;
-    margin-bottom:30px;
+    resize: vertical;
+    margin-bottom: 30px;
 }
 
 label {
-    font-size:14px;
+    font-size: 14px;
 }
 
 /* footer */
@@ -113,42 +114,65 @@ footer ul li {
     transform: translate(-50%, -50%)
 }
 
-.loader-icon{
+.loader-icon {
     font-size: 300% !important;
 }
 
-.default-evee-loader{
+.default-evee-loader {
     color: #449d44;
 }
 
 /* event */
 .titleEvent {
-    border-top:1px solid #df691a;
-    margin-top:21px;
+    border-top: 1px solid #df691a;
+    margin-top: 21px;
 }
 
 .thumbnailEvent {
-    margin-top:5px;
+    margin-top: 5px;
 }
 
 .h2titleEvent {
-    border-top:none;
-    margin-top:0;
+    border-top: none;
+    margin-top: 0;
     padding-bottom: 0;
 }
 
 .h3typeEvent {
-    float:right;
-    margin-top:10px;
-    margin-right:10px;
-    color:#df691a;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #df691a;
 }
 
 .h4dateEvent {
     color: #7ec7ff;
-    margin-top:0;
+    margin-top: 0;
 }
 
 .h4descriptionEvent {
     width: 80%;
+}
+
+.no-background {
+    background: none;
+}
+
+.center-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.plus-module-event {
+    color: green;
+    font-size: 9em;
+}
+
+.plus-border-module-event {
+    border: 3px solid black;
+    border-style: dashed;
+    height: 189px;
+    border-color: #df691a;
 }
