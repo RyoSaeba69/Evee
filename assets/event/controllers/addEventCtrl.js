@@ -3,8 +3,8 @@
  */
 
 angular.module('evee.event').
-    controller('addEventCtrl', ['$scope', '$modalInstance',
-        function ($scope, $modalInstance) {
+    controller('addEventCtrl', ['$scope', '$modalInstance', 'TypeEvent',
+        function ($scope, $modalInstance, TypeEvent) {
 
 
             $scope.event = {};
@@ -18,5 +18,7 @@ angular.module('evee.event').
                     $modalInstance.close($scope.event);
                 }
             };
+
+            $scope.typesEvent = TypeEvent.query();
 
         }]);

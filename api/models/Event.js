@@ -7,12 +7,19 @@
 
 module.exports = {
 
-  attributes: {
-      title: 'string',
-      description: 'string',
-      modules:'array',
-      users: 'array',
-      admins: 'array'
-  }
+    tableName:"events",
+
+    attributes: {
+        title: 'string',
+        description: 'string',
+        modules:'array',
+        users: 'array',
+        admins: 'array',
+
+        type:{
+            model:'typesEvent'
+        }
+    }
+
 };
 
