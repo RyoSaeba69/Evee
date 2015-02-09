@@ -14,7 +14,8 @@ angular.module('evee.user')
 
                         eveeLoader.show();
 
-                        eveeHttp.post('users/save', {data: user})
+
+                        eveeHttp.postForm('/auth/local/register', user)
                             .success(function (data, statut) {
                                 console.log('data ==> ', data);
                                 eveeLoader.hide();

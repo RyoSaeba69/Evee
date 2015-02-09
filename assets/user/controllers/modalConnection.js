@@ -22,15 +22,10 @@ angular.module('evee.user')
 
             $scope.connect = function () {
 
-                eveeHttp.postForm('users/login', $scope.user)
+                eveeHttp.postForm('/auth/local', $scope.user)
                     .success(function(data, statut, headers, config){
-
-                        eveeHttp.get('users/successlogin')
-                            .success(function(data, statut, headers, config){
-                                if(data) {
-                                    authService.setUser(data);
-                                }
-                            });
+                        authService.setUser(data);
+                        console.log('USER ', data);
                     });
 
                 $modalInstance.dismiss('cancel');

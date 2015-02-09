@@ -16,10 +16,18 @@ angular.module('evee')
             },
             postForm: function(url, jsonData, config){
 
+
+
                 var formConfig = {
                     method  : 'POST',
-                    url     : 'users/login',
-                    params    : jsonData,
+                    url     : url,
+                    transformRequest: function(obj) {
+                        var str = [];
+                        for(var p in obj)
+                            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                        return str.join("&");
+                    },
+                    data : jsonData,
                     headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
                 };
 
