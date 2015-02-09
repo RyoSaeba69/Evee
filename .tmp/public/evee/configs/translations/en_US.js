@@ -37,8 +37,10 @@ angular.module('evee')
                 REGISTRATION:'Registration',
                 LOG_IN: 'Log in',
                 LOG_OUT: 'Log out',
-                CREATE_NEW_EVENT: 'Create new event'
-
+                CREATE_NEW_EVENT: 'Create new event',
+                SUCCESSFULLY_LOGIN: 'Successfully login',
+                INVALID_EMAIL_OR_PASSWORD: 'Invalid email or password',
+                SUCCESSFULLY_LOGOUT: 'Successfully logout'
             });
         }
 

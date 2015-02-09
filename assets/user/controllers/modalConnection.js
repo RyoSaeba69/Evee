@@ -22,13 +22,17 @@ angular.module('evee.user')
 
             $scope.connect = function () {
 
-                eveeHttp.postForm('/auth/local', $scope.user)
-                    .success(function(data, statut, headers, config){
-                        authService.setUser(data);
-                        console.log('USER ', data);
-                    });
+                //eveeHttp.postForm('/auth/local', $scope.user)
+                //    .success(function(data, statut, headers, config){
+                //        authService.setUser(data);
+                //        console.log('USER ', data);
+                //    });
 
-                $modalInstance.dismiss('cancel');
+                authService.login($scope.user, function (user) {
+                    if(user) {
+                        $modalInstance.dismiss('close');
+                    }
+                });
 
                 //TODO a retirer une fois tests terminer
                 console.log("Test username : " + $scope.user.name + " test mdp : " + $scope.user.password);

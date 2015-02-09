@@ -7,3 +7,4 @@ bower_components
 
 public/lib/*.js
 public/lib/*.less
+.tmp

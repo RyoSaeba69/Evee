@@ -39,7 +39,10 @@ angular.module('evee')
                 LOG_OUT: 'Déconnexion',
                 CREATE_NEW_EVENT: 'Créer un nouvel événement',
                 TITLE:'Titre',
-                DESCRIPTION:'Description'
+                DESCRIPTION:'Description',
+                SUCCESSFULLY_LOGIN: 'Connexion réussie',
+                INVALID_EMAIL_OR_PASSWORD:'Email ou password incorrect !',
+                SUCCESSFULLY_LOGOUT: 'Vous avez été déconnecté'
             });
 
             $translateProvider.preferredLanguage('fr');
