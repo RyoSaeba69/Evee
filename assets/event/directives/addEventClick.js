@@ -23,19 +23,8 @@ angular.module('evee.event')
 
                                 newEvent.modules = [
                                     {name: 'WishList', directive: {name: 'wish-list', options: {foo: 'NONE'}}},
-                                    {name: 'testModule2', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule3', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule4', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule5', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule6', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule7', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule8', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule9', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule10', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule11', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule12', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule13', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule14', directive: {name: 'hello-module', options: {foo: 'Bar'}}}
+                                    {name: 'testModule1', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
+                                    {name: 'testModule2', directive: {name: 'hello-module', options: {foo: 'Bar'}}}
                                 ];
                                 console.log('NEW EVENT to save', newEvent);
 
