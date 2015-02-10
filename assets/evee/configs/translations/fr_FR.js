@@ -36,7 +36,7 @@ angular.module('evee')
                 HOME_TEXT: 'Ceci est la page d\'accueil pour l\'application de gestion d\'événements,',
                 SIGN_UP: "S'inscrire",
                 REGISTRATION:'Inscription',
-                NO_AKA_SIGN_UP:"Vous n'avez pas encore de compte ? Inscrivez vous !",
+                NO_AKA_SIGN_UP:'N',
                 LOG_IN: 'Connexion',
                 LOG_OUT: 'Déconnexion',
                 CREATE_NEW_EVENT: 'Créer un nouvel événement',
@@ -44,7 +44,8 @@ angular.module('evee')
                 DESCRIPTION:'Description',
                 SUCCESSFULLY_LOGIN: 'Connexion réussie',
                 INVALID_EMAIL_OR_PASSWORD:'Email ou password incorrect !',
-                SUCCESSFULLY_LOGOUT: 'Vous avez été déconnecté'
+                SUCCESSFULLY_LOGOUT: 'Vous avez été déconnecté',
+                SUCCESSFULLY_SIGN_UP: 'Inscription réussie, vous pouvez désormais vous connectez !'
             });
 
             $translateProvider.preferredLanguage('fr');

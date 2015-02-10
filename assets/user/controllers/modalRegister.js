@@ -1,7 +1,7 @@
 
 angular.module('evee.user')
-    .controller('modalRegister', ["$scope", "$modal", "$modalInstance", 'eveeHttp', 'authService',
-        function ($scope, $modal, $modalInstance, eveeHttp, authService) {
+    .controller('modalRegister', ["$scope", "$modal", "$modalInstance", 'eveeHttp', 'authService', 'toastr', '$translate',
+        function ($scope, $modal, $modalInstance, eveeHttp, authService, toastr, $translate) {
 
             $scope.open = function (size) {
 
@@ -23,6 +23,11 @@ angular.module('evee.user')
                 eveeHttp.postForm('/auth/local/register', $scope.user)
                     .success(function (data, statut) {
                         $modalInstance.dismiss('close');
+                        $translate('SUCCESSFULLY_SIGN_UP').then(function (translation) {
+                            toastr.success(translation);
+                        }, function () {
+                            toastr.error('Jesus')
+                        });
                     });
 
             };
