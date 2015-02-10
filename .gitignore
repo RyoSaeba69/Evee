@@ -5,6 +5,5 @@ bower_components
 
 *.log
 
-public/lib/*.js
-public/lib/*.less
+assets/lib/*
 .tmp
