@@ -2,8 +2,8 @@
  * Created by Jean-François on 17/11/2014.
  */
 angular.module('evee.user')
-    .controller('modalConnection', ["$scope", "$modal", "$modalInstance", 'eveeHttp', 'authService',
-        function ($scope, $modal, $modalInstance, eveeHttp, authService) {
+    .controller('modalConnection', ["$scope", "$modal", "$modalInstance", "modalRegisterService", 'eveeHttp', 'authService',
+        function ($scope, $modal, $modalInstance, modalRegisterService, eveeHttp, authService) {
 
             $scope.open = function (size) {
 
@@ -35,10 +35,15 @@ angular.module('evee.user')
                 });
 
                 //TODO a retirer une fois tests terminer
-                console.log("Test username : " + $scope.user.name + " test mdp : " + $scope.user.password);
+                //console.log("Test username : " + $scope.user.name + " test mdp : " + $scope.user.password);
             };
 
             $scope.cancel = function () {
                 $modalInstance.dismiss('cancel');
             };
+
+            $scope.showRegisterForm = function(){
+                $modalInstance.dismiss('cancel');
+                modalRegisterService.open();
+            }
         }]);
