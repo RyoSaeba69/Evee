@@ -18,6 +18,9 @@ angular.module('evee.event')
                         addEventModal.open()
                             .result.then(function (newEvent) {
                                 //eveeLoader.show();
+
+                                console.log("test scope typeEvent de l'événement : "+newEvent.typeEvent);
+
                                 newEvent.modules = [
                                     {name: 'WishList', directive: {name: 'wish-list', options: {foo: 'NONE'}}},
                                     {name: 'testModule2', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
