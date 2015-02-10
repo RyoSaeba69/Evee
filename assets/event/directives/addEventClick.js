@@ -19,13 +19,8 @@ angular.module('evee.event')
                             .result.then(function (newEvent) {
                                 //eveeLoader.show();
 
-                                console.log("test scope typeEvent de l'événement : "+newEvent.typeEvent);
+                                console.log("test scope typeEvent de l'événement : "+newEvent.type);
 
-                                newEvent.modules = [
-                                    {name: 'WishList', directive: {name: 'wish-list', options: {foo: 'NONE'}}},
-                                    {name: 'testModule1', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
-                                    {name: 'testModule2', directive: {name: 'hello-module', options: {foo: 'Bar'}}}
-                                ];
                                 console.log('NEW EVENT to save', newEvent);
 
                                 var eventToSave = new Event(newEvent);

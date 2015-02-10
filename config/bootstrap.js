@@ -24,8 +24,8 @@ module.exports.bootstrap = function(cb) {
     var listeModule = [{name:'Liste de souhait'}, {name:'Sondage'}, {name:'Chat'}, {name:'Annonces'}, {name:'Mur'}];
 
     var errorConsole = function(err, record) {
-        console.log("Err: "+err);
-        console.log("Record: "+record);
+        //console.log("Err: "+err);
+        //console.log("Record: "+record);
     };
 
     listeTypeEvent.forEach(function(oneTypeEvent) {

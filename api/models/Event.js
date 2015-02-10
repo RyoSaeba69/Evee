@@ -12,14 +12,30 @@ module.exports = {
     attributes: {
         title: 'string',
         description: 'string',
-        modules:'array',
         users: 'array',
         admins: 'array',
+
+        wishList:{
+            model:'wishList'
+        },
 
         type:{
             model:'typesEvent'
         }
     }
+
+    //afterCreate: function (savedElement, cb){
+    //    console.log("test SavedElement typeEventId: "+savedElement.type)
+    //    TypesEvent.findOne({id:savedElement.type})
+    //        .populate('events')
+    //        .exec(function(err, typeEvent) {
+    //            if(err)
+    //                console.log("Err afterCreate Event.js : "+err);
+    //            else
+    //                console.log("typeEvent : " + typeEvent);
+    //        });
+    //    cb();
+    //}
 
 };
 
