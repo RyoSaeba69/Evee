@@ -6,8 +6,8 @@
     </div>
     <div class="modal-body">
         <input type="text" class="form-control" ng-model="user.identifier" placeholder="{{ 'MAIL' | translate}}"><br/>
-        <input type="password" class="form-control" ng-model="user.password"
-               placeholder="{{ 'PASSWORD' | translate}}">
+        <input type="password" class="form-control" ng-model="user.password" placeholder="{{ 'PASSWORD' | translate}}"><br>
+        <a href="" ng-click="showRegisterForm()">{{'NO_AKA_SIGN_UP'|translate}}</a>
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" ng-click="connect()">{{'LOGIN'|translate}}</button>
