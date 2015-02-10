@@ -18,8 +18,11 @@ angular.module('evee.event')
                         addEventModal.open()
                             .result.then(function (newEvent) {
                                 //eveeLoader.show();
+
+                                console.log("test scope typeEvent de l'événement : "+newEvent.typeEvent);
+
                                 newEvent.modules = [
-                                    {name: 'testModule1', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
+                                    {name: 'WishList', directive: {name: 'wish-list', options: {foo: 'NONE'}}},
                                     {name: 'testModule2', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
                                     {name: 'testModule3', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
                                     {name: 'testModule4', directive: {name: 'hello-module', options: {foo: 'Bar'}}},
