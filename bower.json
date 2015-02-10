@@ -27,6 +27,7 @@
     "jquery": "~2.1.1",
     "fontawesome": "~4.2.0",
     "angular-ui-calendar": "~0.8.1",
-    "angular-ui-sortable": "~0.13.3"
+    "angular-ui-sortable": "~0.13.3",
+    "angular-toastr": "~0.5.2"
   }
 }

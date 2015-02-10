@@ -1,0 +1,15 @@
+<div class="center jumbotron">
+    <h1>{{'WELCOME' | translate}}</h1>
+
+    <h2>
+        {{'HOME_TEXT' | translate}}
+        <a href="http://www.railstutorial.org/">Evee</a>.
+    </h2>
+    <p class="center">
+        <a href="#" class="btn btn-lg btn-primary" ui-sref="registration">{{'SIGN_UP' | translate}}</a>
+    </p>
+
+    <!--<button class="btn btn-success" ng-click="addNewEvent()" ng-show="isLogged()">{{'CREATE_NEW_EVENT' | translate}}</button>-->
+    <!--<button class="btn btn-success" ng-click="addNewEvent()" ng-show="true">{{'CREATE_NEW_EVENT' | translate}}</button>-->
+    <button class="btn btn-success" add-event-click ng-show="true">{{'CREATE_NEW_EVENT' | translate}}</button>
+</div>

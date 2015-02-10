@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="evee">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Evee</title>
+
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootswatch.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/angular-toastr.css">
+
+    <script src="lib/sails.io.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/angular.js"></script>
+
+    <script src="lib/ui-bootstrap-tpls.js"></script>
+    <script src="lib/sortable.js"></script>
+    <script src="lib/jquery-ui.js"></script>
+    <script src="lib/fullcalendar.js"></script>
+    <script src="lib/calendar.js"></script>
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="lib/angular-translate.js"></script>
+    <script src="lib/angular-animate.js"></script>
+    <script src="lib/angular-resource.js"></script>
+    <script src="lib/angular-toastr.js"></script>
+
+    <!-- inject:js -->
+    <script src="evee/module.js"></script>
+    <script src="evee/configs/translations/jp_JP.js"></script>
+    <script src="evee/configs/translations/fr_FR.js"></script>
+    <script src="evee/configs/translations/en_US.js"></script>
+    <script src="user/module.js"></script>
+    <script src="user/services/modalConnectionService.js"></script>
+    <script src="user/directives/registrationForm.js"></script>
+    <script src="user/directives/loginMenuLink.js"></script>
+    <script src="user/controllers/modalConnection.js"></script>
+    <script src="test/module.js"></script>
+    <script src="test/directives/helloModule.js"></script>
+    <script src="evee/services/eveeLoader.js"></script>
+    <script src="evee/services/eveeHttp.js"></script>
+    <script src="evee/services/authService.js"></script>
+    <script src="evee/directives/navMenu.js"></script>
+    <script src="evee/directives/eveeLoader.js"></script>
+    <script src="evee/directives/eveeHome.js"></script>
+    <script src="evee/directives/eveeFooter.js"></script>
+    <script src="evee/directives/contactForm.js"></script>
+    <script src="evee/constants/auth_event.js"></script>
+    <script src="evee/configs/routeConfigs.js"></script>
+    <script src="event/module.js"></script>
+    <script src="event/services/addEventModal.js"></script>
+    <script src="event/services/TypeEvent.js"></script>
+    <script src="event/services/Event.js"></script>
+    <script src="event/directives/wishList.js"></script>
+    <script src="event/directives/dynamicDirective.js"></script>
+    <script src="event/directives/dispEvent.js"></script>
+    <script src="event/directives/addEventClick.js"></script>
+    <script src="event/controllers/addEventCtrl.js"></script>
+    <!-- endinject -->
+</head>
+<body>
+
+<nav-menu></nav-menu>
+
+<div ui-view></div>
+
+
+</body>
+<evee-footer></evee-footer>
+</html>

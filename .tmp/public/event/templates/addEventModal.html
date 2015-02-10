@@ -1,0 +1,31 @@
+<div>
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span><span
+                class="sr-only">{{'CLOSE' | translate}}</span></button>
+        <h3 class="modal-title orange">{{ 'CREATE_NEW_EVENT' | translate}}</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="event_title">Nom de l'événement :</label>
+            <input type="text" id="event_title" class="form-control" ng-model="event.title" placeholder="{{ 'TITLE' | translate}}"><br/>
+        </div>
+
+        <div class="form-group">
+            <label for="event_description">Description de l'événement :</label>
+            <textarea class="form-control" ng-model="event.description" id="event_description" rows="5" placeholder="{{'DESCRIPTION' | translate}}"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="event_type">Type de l'événement :</label>
+            <select class="form-control" id="event_type" ng-model="event.typeEvent">
+                <option value="" disabled selected>Sélectionnez votre type d'événement</option>
+                <option ng-repeat="typeEvent in typesEvent" ng-value="typeEvent.id">{{typeEvent.name}}</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="createNewEvent()">{{'CREATE_NEW_EVENT'|translate}}</button>
+        <button class="btn btn-default" ng-click="cancel()">{{'CANCEL'|translate}}</button>
+    </div>
+</div>
