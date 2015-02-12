@@ -620,7 +620,7 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
     replace: true,
     controller: 'CarouselController',
     require: 'carousel',
-    templateUrl: 'template/carousel/eveeCarousel.html',
+    templateUrl: 'template/carousel/carousel.html',
     scope: {
       interval: '=',
       noTransition: '=',

@@ -36,5 +36,23 @@ module.exports.bootstrap = function(cb) {
         Module.findOrCreate(oneModule, oneModule).exec(errorConsole);
     });
 
+    // Populate les modules par défaut de chaque type d'événement
+    TypesEvent.find({}).exec(function (err,allType) {
+        allType.forEach(function (oneType){
+            //console.log("test populate ::: TypeEvent name : "+oneType.name);
+            switch(oneType.name) {
+                case 'Anniversaire':
+                    ;
+                    break;
+                case 'Crémaillère':
+                    ;
+                    break;
+                case 'Mariage':
+                    ;
+                    break;
+            }
+        });
+    });
+
     cb();
 };
