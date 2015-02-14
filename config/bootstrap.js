@@ -39,16 +39,34 @@ module.exports.bootstrap = function(cb) {
     // Populate les modules par défaut de chaque type d'événement
     TypesEvent.find({}).exec(function (err,allType) {
         allType.forEach(function (oneType){
+
             //console.log("test populate ::: TypeEvent name : "+oneType.name);
             switch(oneType.name) {
                 case 'Anniversaire':
-                    ;
+                    Module.findOne({name:'Liste de souhait'}).then(function(module){
+                        oneType.modules_defaults.add(module.id);
+                        oneType.save(console.log);
+                    });
+                    Module.findOne({name:'Mur'}).then(function(module){
+                        oneType.modules_defaults.add(module.id);
+                        oneType.save(console.log);
+                    });
                     break;
                 case 'Crémaillère':
-                    ;
+                    Module.findOne({name:'Liste de souhait'}).then(function(module){
+                        oneType.modules_defaults.add(module.id);
+                        oneType.save(console.log);
+                    });
                     break;
                 case 'Mariage':
-                    ;
+                    Module.findOne({name:'Liste de souhait'}).then(function(module){
+                        oneType.modules_defaults.add(module.id);
+                        oneType.save(console.log);
+                    });
+                    Module.findOne({name:'Annonces'}).then(function(module){
+                        oneType.modules_defaults.add(module.id);
+                        oneType.save(console.log);
+                    });
                     break;
             }
         });
