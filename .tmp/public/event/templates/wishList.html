@@ -4,14 +4,14 @@
 
         <tbody>
             <th class="image">Image</th>
-            <th class="name">Nom</th>
+            <th class="name" ng-bind="WishList.wishes.length"></th>
             <th class="quantity">Quantité</th>
             <th class="taken">Déja pris ?</th>
             <tr ng-repeat="wish in WishList.wishes">
-                <td class="image" ng-bind="wish.image"></td>
-                <td class="name" ng-bind="wish.name"></td>
-                <td class="quantity" ng-bind="wish.quantity"></td>
-                <td class="taken" ng-bind="wish.taken"></td>
+                <td class="image" ng-bind="wish"></td>
+                <td class="name" ng-bind="wish"></td>
+                <td class="quantity" ng-bind="wish"></td>
+                <td class="taken" ng-bind="wish"></td>
             </tr>
         </tbody>
 

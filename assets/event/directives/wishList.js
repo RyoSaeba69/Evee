@@ -8,12 +8,17 @@ angular.module('evee.event')
             return {
                 restrict: 'E',
                 scope: {
-                    WishListId: '='
+                    WishListId: '=',
+                    eventId: '='
                 },
                 templateUrl: 'event/templates/wishList.html',
                 link: function (scope) {
-                    scope.WishList = WishList.get({event: scope.eventId}, function () {
-                        console.log('WishList fetched ! :)');
+                    scope.$watch('eventId', function (eventId) {
+                        if(eventId) {
+                            scope.WishList = WishList.get({eventId: eventId}, function () {
+                                console.log('WishList fetched ! :)');
+                            });
+                        }
                     });
                 }
             };

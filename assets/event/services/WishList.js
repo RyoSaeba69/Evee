@@ -4,7 +4,7 @@
 angular.module('evee.event')
     .factory('WishList', ['$resource',
         function ($resource) {
-            return $resource('/rest/WishList/:WishListId', {WishListId: '@id'}, {
+            return $resource('/rest/event/:eventId/wishList', {eventId: '@id'}, {
                 update: 'PUT'
             });
         }]);
