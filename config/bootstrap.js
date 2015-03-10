@@ -13,27 +13,76 @@
 //var TypesEvent = require('../api/models/TypesEvent.js');
 //var Module = require('../api/models/Module.js');
 
-module.exports.bootstrap = function(cb) {
+var Q = require('q');
 
-  // It's very important to trigger this callback method when you are finished
-  // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
+module.exports.bootstrap = function (cb) {
+
+    // It's very important to trigger this callback method when you are finished
+    // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
 
     sails.services.passport.loadStrategies();
 
-    var listeTypeEvent = [{name:'Anniversaire'}, {name:'Crémaillère'}, {name:'Mariage'}];
-    var listeModule = [{name:'Liste de souhait'}, {name:'Sondage'}, {name:'Chat'}, {name:'Annonces'}, {name:'Mur'}];
+    var listeTypeEvent = [{name: 'Anniversaire'}, {name: 'Crémaillère'}, {name: 'Mariage'}];
+    var listeModule = [{name: 'Liste de souhait'}, {name: 'Sondage'}, {name: 'Chat'}, {name: 'Annonces'}, {name: 'Mur'}];
 
-    var errorConsole = function(err, record) {
-        //console.log("Err: "+err);
-        //console.log("Record: "+record);
-    };
+    var tasksPromises = [];
 
-    listeTypeEvent.forEach(function(oneTypeEvent) {
-        TypesEvent.findOrCreate(oneTypeEvent, oneTypeEvent).exec(errorConsole);
+    listeTypeEvent.forEach(function (oneTypeEvent) {
+        tasksPromises.push(TypesEvent.findOrCreate(oneTypeEvent, oneTypeEvent));
     });
 
-    listeModule.forEach(function(oneModule) {
-        Module.findOrCreate(oneModule, oneModule).exec(errorConsole);
+    listeModule.forEach(function (oneModule) {
+        tasksPromises.push(Module.findOrCreate(oneModule, oneModule));
+    });
+
+    // Populate les modules par défaut de chaque type d'événement
+    Q.all(tasksPromises).then(function () {
+
+        TypesEvent.find({}).exec(function (err, allType) {
+            allType.forEach(function (oneType) {
+
+                //console.log("test populate ::: TypeEvent name : "+oneType.name);
+                switch (oneType.name) {
+                    case 'Anniversaire':
+                        Module.findOne({name: 'Liste de souhait'}).then(function (module) {
+                            oneType.modules_defaults.add(module.id);
+                            oneType.save(console.log);
+                        }).catch(function (err) {
+
+                        });
+                        Module.findOne({name: 'Mur'}).then(function (module) {
+                            oneType.modules_defaults.add(module.id);
+                            oneType.save(console.log);
+                        }).catch(function (err) {
+
+                        });
+                        break;
+                    case 'Crémaillère':
+                        Module.findOne({name: 'Liste de souhait'}).then(function (module) {
+                            oneType.modules_defaults.add(module.id);
+                            oneType.save(console.log);
+                        }).catch(function (err) {
+
+                        });
+                        break;
+                    case 'Mariage':
+                        Module.findOne({name: 'Liste de souhait'}).then(function (module) {
+                            oneType.modules_defaults.add(module.id);
+                            oneType.save(console.log);
+                        }).catch(function (err) {
+
+                        });
+                        Module.findOne({name: 'Annonces'}).then(function (module) {
+                            oneType.modules_defaults.add(module.id);
+                            oneType.save(console.log);
+                        }).catch(function (err) {
+
+                        });
+                        break;
+                }
+            });
+        });
+
     });
 
     cb();

@@ -16,7 +16,7 @@ module.exports = {
         },
         owners:{
             collection:'typesEvent',
-            via:'modules'
+            via:'modules_defaults'
         }
     }
 };

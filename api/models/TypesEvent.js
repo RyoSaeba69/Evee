@@ -22,7 +22,7 @@ module.exports = {
             collection:'event',
             via:'type'
         },
-        modules: {
+        modules_defaults: {
             collection:'module',
             via:'owners'
         }
