@@ -91,7 +91,7 @@ var AuthController = {
    * @param {Object} res
    */
   register: function (req, res) {
-    res.view({
+    res.send({
       errors: req.flash('error')
     });
   },
