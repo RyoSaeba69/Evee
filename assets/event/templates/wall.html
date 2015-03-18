@@ -1,0 +1,10 @@
+<div class="col-md-8">
+    <h2>Title Wall</h2>
+    <div ng-repeat="subject in subjects | orderBy:'createdAt':true" ng-value="subject.id">
+        <h3>{{subject.title}}</h3>
+        <div ng-repeat="message in messages | orderBy:'createdAt':true" ng-value="message.id">
+            <p class="author">{{message.author}} - {{message.createdAt}}</p>
+            <p class="content">{{message.content}}</p>
+        </div>
+    </div>
+</div>

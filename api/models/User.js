@@ -7,7 +7,10 @@ var User = {
     attributes: {
         username: {type: 'string', unique: true},
         email: {type: 'email', unique: true},
-        passports: {collection: 'Passport', via: 'user'}
+        passports: {collection: 'Passport', via: 'user'},
+        wallSubjects: {collection:'subject', via:'author'},
+        wallSubjectMessages: {collection:'message', via:'author'},
+        likeStatus: {collection:'like', via:'author'}
     }
 };
 

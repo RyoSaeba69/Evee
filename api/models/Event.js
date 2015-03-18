@@ -19,6 +19,10 @@ module.exports = {
             model:'wishList'
         },
 
+        wall:{
+            model:'wall'
+        },
+
         type:{
             model:'typesEvent'
         }
