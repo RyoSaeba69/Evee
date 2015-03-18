@@ -9,14 +9,16 @@ module.exports = {
     tableName:"module",
 
     attributes: {
+        collectionName: {
+          type: 'string'
+        },
         name: {
             type:'string',
             unique:true,
             required:true
         },
-        owners:{
-            collection:'typesEvent',
-            via:'modules_defaults'
+        directiveName: {
+            type: 'string'
         }
     }
 };

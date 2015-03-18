@@ -10,16 +10,17 @@ module.exports = {
     tableName:"wishlist",
 
   attributes: {
-
       name: {
           type: 'string',
           defaultsTo: 'Nouvelle Liste de souhaits'
       },
       wishes:'array',
-      event:{
-          model:'event'
+      moduleInfo:{
+          model: 'module'
       }
-
   }
+
+    //afterCreate: function(module){
+    //}
 };
 

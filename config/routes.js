@@ -57,6 +57,10 @@ module.exports.routes = {
 
     'get /auth/:provider': 'AuthController.provider',
     'get /auth/:provider/callback': 'AuthController.callback',
-    'get /auth/:provider/:action': 'AuthController.callback'
+    'get /auth/:provider/:action': 'AuthController.callback',
+
+    // Route for event
+    'get /ctrl/event/:id': 'EventController.findEventWithModules',
+    'post /ctrl/event/module/saveModule': 'EventController.addNewModule'
 
 };

@@ -23,7 +23,7 @@ module.exports.bootstrap = function (cb) {
     sails.services.passport.loadStrategies();
 
     var listeTypeEvent = [{name: 'Anniversaire'}, {name: 'Crémaillère'}, {name: 'Mariage'}];
-    var listeModule = [{name: 'Liste de souhait'}, {name: 'Sondage'}, {name: 'Chat'}, {name: 'Annonces'}, {name: 'Mur'}];
+    var listeModule = [{name: 'Liste de souhait', collectionName: 'wishlist', directiveName: 'wish-list'}, {name: 'Sondage'}, {name: 'Chat'}, {name: 'Annonces'}, {name: 'Mur'}];
 
     var tasksPromises = [];
 

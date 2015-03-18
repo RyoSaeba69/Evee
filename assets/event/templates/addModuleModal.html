@@ -1,0 +1,18 @@
+<div>
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span><span
+                class="sr-only">{{'CLOSE' | translate}}</span></button>
+        <h3 class="modal-title orange">{{ 'ADD_NEW_MODULE' | translate}}</h3>
+    </div>
+    <div class="modal-body">
+        <button ng-repeat="module in modalVar.allModules" ng-click="selectModule(module)">{{module.name | translate}}</button>
+        <select ng-model="modalVar.moduleToAdd.moduleInfo">
+            <option ng-repeat="module in modalVar.allModules" ng-value="module">
+            </option>
+        </select>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok(modalVar.moduleToAdd)">{{'ADD_NEW_MODULE'|translate}}</button>
+        <button class="btn btn-default" ng-click="cancel()">{{'CANCEL'|translate}}</button>
+    </div>
+</div>

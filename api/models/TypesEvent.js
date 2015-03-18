@@ -21,12 +21,7 @@ module.exports = {
         events:{
             collection:'event',
             via:'type'
-        },
-        modules_defaults: {
-            collection:'module',
-            via:'owners'
         }
-
     }
 };
 
