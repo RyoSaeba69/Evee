@@ -21,10 +21,6 @@ module.exports = {
           type: 'array'
         },
 
-        wall:{
-            model:'wall'
-        },
-
         type:{
             model:'typesEvent'
         }
@@ -40,8 +36,9 @@ module.exports = {
                     var currentModel = sails.models[moduleInfo.type.toLowerCase()];
 
                     if (currentModel) {
-                        currentModel.findOne({id: moduleInfo.id}).exec(function (err, foundModule) {
+                        currentModel.findOne({id: moduleInfo.id}).populate('moduleInfo').exec(function (err, foundModule) {
                             event.modules.push(foundModule);
+                            console.log('MODMOD ', foundModule);
                             moduleFetched++;
                             if (moduleFetched === event.moduleInfo.length) {
                                 callback(event);

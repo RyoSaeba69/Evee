@@ -14,17 +14,17 @@
 </div>
 
 <div class="row" ui-sortable ng-model="event.modules">
-    <div class="col-md-3" ng-repeat="module in event.modules">
+    <div class="col-md-6" ng-repeat="module in event.modules">
         <h2 ng-bind="module.name"></h2>
-        <dynamic-directive directive-name="module.directive.name"
-                           options="module.directive.options" model="module"></dynamic-directive>
+        <dynamic-directive directive-name="module.moduleInfo.directiveName"
+                            model="module"></dynamic-directive>
     </div>
     <!-- Wish List pour test -->
-    <div class="col-md-3" >
+    <!--    <div class="col-md-3" >
         <wish-list event-id="eventId"></wish-list>
-    </div>
+    </div>-->
     <!-- Wall pour test JF -->
-    <wall event-id="eventId"></wall>
+    <!--    <wall event-id="eventId"></wall>-->
 
     <div class="col-md-3 plus-border-module-event">
         <button class="btn no-background center-element" ng-click="addModule()">

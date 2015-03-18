@@ -30,6 +30,10 @@ angular.module('evee.event')
                         addModuleModal.open().result.then(function (moduleToAdd) {
                             // SAVE NEW MODULE HERE
 
+                            if(!moduleToAdd){
+                                return;
+                            }
+
                             if(!scope.event.modules){
                                 scope.event.modules = [];
                             }

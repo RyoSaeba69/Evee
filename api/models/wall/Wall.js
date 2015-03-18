@@ -12,8 +12,8 @@ module.exports = {
             type: 'string',
             defaultsTo: 'Wall'
         },
-        event:{
-            model:'event'
+        moduleInfo:{
+            model: 'module'
         },
         subjects:{
             collection:'subject',
