@@ -40,7 +40,8 @@ angular.module('evee')
                             }
 
                             $translate('SUCCESSFULLY_LOGOUT').then(function (translation) {
-                                toastr.success(translation);
+                                toastr.success
+                                (translation);
                             }, function () {
                                 toastr.error('Jesus')
                             });

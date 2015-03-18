@@ -17,7 +17,7 @@
     <div class="col-md-3" ng-repeat="module in event.modules">
         <h2 ng-bind="module.name"></h2>
         <dynamic-directive directive-name="module.directive.name"
-                           options="module.directive.options"></dynamic-directive>
+                           options="module.directive.options" model="module"></dynamic-directive>
     </div>
     <!-- Wish List pour test -->
     <div class="col-md-3" >
@@ -27,7 +27,7 @@
     <wall event-id="eventId"></wall>
 
     <div class="col-md-3 plus-border-module-event">
-        <button class="btn no-background center-element">
+        <button class="btn no-background center-element" ng-click="addModule()">
             <span class="glyphicon glyphicon-plus-sign plus-module-event"></span>
         </button>
     </div>
