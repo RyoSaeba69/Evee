@@ -176,3 +176,47 @@ footer ul li {
     height: 189px;
     border-color: #df691a;
 }
+
+/* wall */
+
+.nav-tabs-custom {
+    border-bottom:1px solid #4e5d6c;
+    margin-bottom:0px;
+}
+
+.tab-content-custom {
+    padding-top:15px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom:15px;
+    border-bottom: 1px solid #4e5d6c;
+}
+
+.wall-divers-title {
+    color:#df691a;
+    margin-top:10px;
+    margin-right:15px;
+    margin-bottom:15px;
+}
+
+.form-control-custom {
+    color:#ebebeb;
+    background-color:transparent;
+    border:0px;
+    margin:0px;
+    padding:0px;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+    -webkit-transition:none;
+}
+
+li.active>a {
+    color:#df691a !important;
+}
+
+.footer-btn-custome {
+}
+
+.footer-message {
+    margin-bottom: 15px;
+}

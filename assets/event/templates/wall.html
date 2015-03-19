@@ -1,5 +1,39 @@
 <div class="col-md-8">
-    <h2>Title Wall</h2>
+    <p class="wall-divers-title">PUBLICATION</p>
+    <div role="tabpanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-tabs-custom" role="tablist" id="myTab">
+            <li role="presentation" class="active">
+                <a href="#message" aria-controls="message" role="tab" data-toggle="tab">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;Message
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#image" aria-controls="image" role="tab" data-toggle="tab">
+                    <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>&nbsp;&nbsp;Photo
+                </a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content tab-content-custom">
+            <div role="tabpanel" class="tab-pane fade in active" id="message">
+                <textarea class="form-control form-control-custom" rows="3" placeholder="Exprimez-vous" ng-model="wall.subject"></textarea>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="image">...</div>
+        </div>
+
+        <div class="footer-message">
+            <button type="button" id="writeMsg" data-loading-text="Envoi..." class="btn btn-primary footer-btn-custome" autocomplete="off">
+                Partager
+            </button>
+        </div>
+    </div>
+
+    <div>
+        <p class="wall-divers-title">ACTIVITE</p>
+    </div>
+
     <div ng-repeat="subject in subjects | orderBy:'createdAt':true" ng-value="subject.id">
         <h3>{{subject.title}}</h3>
         <div ng-repeat="message in messages | orderBy:'createdAt':true" ng-value="message.id">
@@ -8,3 +42,16 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('#myTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+    $('#writeMsg').on('click', function () {
+        var $btn = $(this).button('loading')
+        // business logic...
+        $btn.button('reset')
+    })
+</script>

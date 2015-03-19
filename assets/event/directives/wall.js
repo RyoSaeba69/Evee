@@ -9,10 +9,12 @@ angular.module('evee.event')
                 restrict: 'E',
                 scope: {
                     WallId: '=',
-                    eventId: '='
+                    eventId: '=',
                 },
                 templateUrl: 'event/templates/wall.html',
                 link: function (scope) {
+                    scope.wall = {subject:''}
+
                     scope.$watch('eventId', function (eventId) {
                         if(eventId) {
                             scope.Wall = Wall.get({eventId: eventId}, function () {
