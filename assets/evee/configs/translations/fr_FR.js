@@ -45,7 +45,14 @@ angular.module('evee')
                 SUCCESSFULLY_LOGIN: 'Connexion réussie',
                 INVALID_EMAIL_OR_PASSWORD:'Email ou password incorrect !',
                 SUCCESSFULLY_LOGOUT: 'Vous avez été déconnecté',
-                SUCCESSFULLY_SIGN_UP: 'Inscription réussie, vous pouvez désormais vous connectez !'
+                SUCCESSFULLY_SIGN_UP: 'Inscription réussie, vous pouvez désormais vous connectez !',
+                EMAIL_MISSING: 'Merci de renseigner un email',
+                USERNAME_MISSING: "Merci de renseigner un nom d'utilisateur",
+                PASSWORDS_MISSING: "Merci de renseigner un mot de passe",
+                PASSWORDS_DONT_MATCH: "Les deux mots de passes ne correspondent pas",
+                EMAIL_EXISTS: "Cette adresse email est existe déjà",
+                USER_EXISTS: "Ce nom d'utilisateur existe déjà",
+                USER_EXISTS: "Le mot de passe est incorrecte",
             });
 
             $translateProvider.preferredLanguage('fr');
