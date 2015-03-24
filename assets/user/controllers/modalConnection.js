@@ -46,4 +46,8 @@ angular.module('evee.user')
                 $modalInstance.dismiss('cancel');
                 modalRegisterService.open();
             }
+
+            $scope.pressToConnect = function($event){
+                if($event.which == 13) $scope.connect();
+            }
         }]);
