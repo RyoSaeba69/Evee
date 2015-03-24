@@ -8,9 +8,9 @@ module.exports = {
 
     attributes: {
 
-        title: {
+        principalMessage: {
             type: 'string',
-            defaultsTo: 'My title of subject'
+            required: true
         },
         author:{
             model:'user'

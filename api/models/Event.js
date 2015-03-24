@@ -5,8 +5,6 @@
 * @docs        :: http://sailsjs.org/#!documentation/models
 */
 
-var Q = require('q');
-
 module.exports = {
 
     tableName:"events",
@@ -36,7 +34,7 @@ module.exports = {
                     var currentModel = sails.models[moduleInfo.type.toLowerCase()];
 
                     if (currentModel) {
-                        currentModel.findOne({id: moduleInfo.id}).populate('moduleInfo').exec(function (err, foundModule) {
+                        currentModel.findModule(moduleInfo.id, function (foundModule) {
                             event.modules.push(foundModule);
                             console.log('MODMOD ', foundModule);
                             moduleFetched++;
@@ -58,20 +56,5 @@ module.exports = {
             }
         });
     }
-
-
-    //afterCreate: function (savedElement, cb){
-    //    console.log("test SavedElement typeEventId: "+savedElement.type)
-    //    TypesEvent.findOne({id:savedElement.type})
-    //        .populate('events')
-    //        .exec(function(err, typeEvent) {
-    //            if(err)
-    //                console.log("Err afterCreate Event.js : "+err);
-    //            else
-    //                console.log("typeEvent : " + typeEvent);
-    //        });
-    //    cb();
-    //}
-
 };
 

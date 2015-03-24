@@ -3,25 +3,39 @@
  */
 
 angular.module('evee.event')
-    .directive('wall', ['Wall',
-        function (Wall) {
+    .directive('wall', ['Wall', 'authService', 'eveeHttp',
+        function (Wall, authService, eveeHttp) {
             return {
                 restrict: 'E',
                 scope: {
                     WallId: '=',
-                    eventId: '=',
+                    wall: '=model'
                 },
                 templateUrl: 'event/templates/wall.html',
                 link: function (scope) {
-                    scope.wall = {subject:''}
-
-                    scope.$watch('eventId', function (eventId) {
-                        if(eventId) {
-                            scope.Wall = Wall.get({eventId: eventId}, function () {
-                                console.log('Wall fetched ! :)');
-                            });
-                        }
+                    $('#myTab a').click(function (e) {
+                        e.preventDefault()
+                        $(this).tab('show')
                     });
+
+                    /*$('#writeMsg').on('click', function () {
+                        var $btn = $(this).button('loading')
+                        // business logic...
+                        $btn.button('reset')
+                    });*/
+
+                    scope.saveSubject = function(newPrincipalMessage){
+                        var newSubject = {
+                            principalMessage : newPrincipalMessage,
+                            author : authService.getUser()
+                        };
+
+                        scope.wall.subjects.push(newSubject);
+
+                        eveeHttp.post("rest/wall/save", {
+                            data: scope.wall
+                        });
+                    };
                 }
             };
         }]);

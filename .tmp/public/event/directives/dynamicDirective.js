@@ -9,11 +9,11 @@ angular.module('evee.event')
                 restrict: 'E',
                 scope: {
                     directiveName: '=',
-                    options: '='
+                    model: '='
                 },
                 link: function (scope, element) {
 
-                    var dirToCompile = '<'+scope.directiveName+' options="options">'
+                    var dirToCompile = '<'+scope.directiveName+' model="model">'
                         +'</'+scope.directiveName+'>';
 
                     element.html(dirToCompile);

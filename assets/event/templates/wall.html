@@ -18,13 +18,13 @@
         <!-- Tab panes -->
         <div class="tab-content tab-content-custom">
             <div role="tabpanel" class="tab-pane fade in active" id="message">
-                <textarea class="form-control form-control-custom" rows="3" placeholder="Exprimez-vous" ng-model="wall.subject"></textarea>
+                <textarea class="form-control form-control-custom" rows="3" placeholder="Exprimez-vous" ng-model="principalMessage"></textarea>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="image">...</div>
         </div>
 
         <div class="footer-message">
-            <button type="button" id="writeMsg" data-loading-text="Envoi..." class="btn btn-primary footer-btn-custome" autocomplete="off">
+            <button type="button" id="writeMsg" data-loading-text="Envoi..." class="btn btn-primary footer-btn-custome" autocomplete="off" ng-click="saveSubject(principalMessage)">
                 Partager
             </button>
         </div>
@@ -34,24 +34,12 @@
         <p class="wall-divers-title">ACTIVITE</p>
     </div>
 
-    <div ng-repeat="subject in subjects | orderBy:'createdAt':true" ng-value="subject.id">
-        <h3>{{subject.title}}</h3>
-        <div ng-repeat="message in messages | orderBy:'createdAt':true" ng-value="message.id">
+    <div ng-repeat="subject in wall.subjects | orderBy:'createdAt':true" ng-value="subject.id">
+        <h3>{{subject.principalMessage}} - {{subject.author.username}}</h3>
+        <div ng-repeat="message in subject.messages | orderBy:'createdAt':true" ng-value="message.id">
             <p class="author">{{message.author}} - {{message.createdAt}}</p>
             <p class="content">{{message.content}}</p>
         </div>
     </div>
 </div>
 
-<script>
-    $('#myTab a').click(function (e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
-
-    $('#writeMsg').on('click', function () {
-        var $btn = $(this).button('loading')
-        // business logic...
-        $btn.button('reset')
-    })
-</script>
