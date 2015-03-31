@@ -32,9 +32,15 @@ angular.module('evee.event')
 
                         scope.wall.subjects.push(newSubject);
 
-                        eveeHttp.post("rest/wall/save", {
-                            data: scope.wall
-                        });
+                        eveeHttp.put("rest/wall/" + scope.wall.id, scope.wall)
+                            .error(function(err) {
+                                console.log(err);
+                            }).success(function (data) {
+                                //TODO Antoine MULLER
+                                scope.wall = data;
+                                console.log("test Data : ",data);
+                            });
+
                     };
                 }
             };

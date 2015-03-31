@@ -12,12 +12,14 @@ angular.module('evee')
                     url: '/home',
                     templateUrl: 'views/home.html'
                 })
-
                 .state('help', {
                     url: '/help',
                     templateUrl: 'views/help.html'
                 })
-
+                .state('profil', {
+                    url: '/profil',
+                    templateUrl: 'view/profil.html'
+                })
                 .state('contact', {
                     url: '/contact',
                     templateUrl: 'views/contact.html'

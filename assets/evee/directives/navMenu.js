@@ -27,7 +27,7 @@ angular.module('evee')
                         {
                             name: 'USER',
                             icon:'fa fa-user',
-                            subMenus: [{name: 'Profil', state: 'home'}, {name: 'Hour', state: 'home'}]
+                            subMenus: [{name: 'Profil', state: 'profil'}, {name: 'Hour', state: 'home'}]
                         },
                         {
                             name: 'LANGUAGES',

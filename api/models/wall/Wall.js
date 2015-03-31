@@ -25,8 +25,8 @@ module.exports = {
             if(wall) {
                 var tabPromises = [];
                 wall.subjects.forEach(function(currentSubject, subjectIndex) {
-                    var promise = Subject.findOne({id:currentSubject.id}).populateAll();
-                        promise.exec(function (err, findSubject){
+                    var promise = Subject.findModule(currentSubject.id);
+                        promise.then(function (findSubject){
                         if(err) {
                             sails.log.error(err);
                         } else {

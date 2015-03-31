@@ -11,6 +11,9 @@ angular.module('evee')
             get: function (url, config) {
                 return $http.get(url, config);
             },
+            put: function(url, data, config) {
+                return $http.put(url,data,config);
+            },
             post: function (url, config) {
                 return $http.post(url, config);
             },

@@ -32,7 +32,6 @@ module.exports = {
             if(event.moduleInfo) {
                 event.moduleInfo.forEach(function (moduleInfo) {
                     var currentModel = sails.models[moduleInfo.type.toLowerCase()];
-
                     if (currentModel) {
                         currentModel.findModule(moduleInfo.id, function (foundModule) {
                             event.modules.push(foundModule);

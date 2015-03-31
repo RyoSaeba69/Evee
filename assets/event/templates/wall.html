@@ -1,6 +1,7 @@
 <div class="col-md-8">
     <p class="wall-divers-title">PUBLICATION</p>
-    <div role="tabpanel">
+
+    <div role="tabpanel" class="row">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-tabs-custom" role="tablist" id="myTab">
             <li role="presentation" class="active">
@@ -18,13 +19,15 @@
         <!-- Tab panes -->
         <div class="tab-content tab-content-custom">
             <div role="tabpanel" class="tab-pane fade in active" id="message">
-                <textarea class="form-control form-control-custom" rows="3" placeholder="Exprimez-vous" ng-model="principalMessage"></textarea>
+                <textarea class="form-control form-control-custom" rows="3" placeholder="Exprimez-vous"
+                          ng-model="principalMessage"></textarea>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="image">...</div>
         </div>
 
         <div class="footer-message">
-            <button type="button" id="writeMsg" data-loading-text="Envoi..." class="btn btn-primary footer-btn-custome" autocomplete="off" ng-click="saveSubject(principalMessage)">
+            <button type="button" id="writeMsg" data-loading-text="Envoi..." class="btn btn-primary footer-btn-custome"
+                    autocomplete="off" ng-click="saveSubject(principalMessage)">
                 Partager
             </button>
         </div>
@@ -34,11 +37,55 @@
         <p class="wall-divers-title">ACTIVITE</p>
     </div>
 
-    <div ng-repeat="subject in wall.subjects | orderBy:'createdAt':true" ng-value="subject.id">
-        <h3>{{subject.principalMessage}} - {{subject.author.username}}</h3>
-        <div ng-repeat="message in subject.messages | orderBy:'createdAt':true" ng-value="message.id">
-            <p class="author">{{message.author}} - {{message.createdAt}}</p>
-            <p class="content">{{message.content}}</p>
+    <div class="row" ng-repeat="subject in wall.subjects | orderBy:'createdAt':true" ng-value="subject.id">
+        <div class="content-subject">
+            <div class="presentation-subject">
+                <div class="header-subject">
+                    <div class="subject-thumbnail-imgProfil">
+                        <a href="#" class="thumbnail thumbnail-custom">
+                            <img src="" alt="img"/>
+                        </a>
+                    </div>
+                    <p class="subject-author">{{subject.author.username}}</p>
+
+                    <p>{{subject.createdAt}}</p>
+                </div>
+                <p class="principalMessage-subject">{{subject.principalMessage}}</p>
+
+                <div class="footer-subject">
+                    <a href="">J'aime</a>
+                </div>
+            </div>
+
+            <div class="content-answer-subject">
+                <div class="answer-subject row">
+                    <div class="subject-thumbnail-imgProfil subject-thumbnail-imgProfil-custom col-md-2">
+                        <a href="#" class="thumbnail thumbnail-custom">
+                            <img src="" alt="img"/>
+                        </a>
+                    </div>
+                    <div class="col-md-10">
+                        <textarea class="form-control form-control-custom form-control-custom-subject"
+                                  placeholder="Ecrire un commentaire..."
+                                  ng-model="answerSubject"></textarea>
+                    </div>
+                </div>
+
+                <div ng-repeat="message in subject.messages | orderBy:'createdAt':true" ng-value="message.id">
+                    <div class="answer-subject row">
+                        <div class="subject-thumbnail-imgProfil subject-thumbnail-imgProfil-custom col-md-2">
+                            <a href="#" class="thumbnail thumbnail-custom">
+                                <img src="" alt="img"/>
+                            </a>
+                        </div>
+                        <div class="col-md-10">
+                            <p class="subject-author">{{message.author.username}}</p>
+                            <p class="content">{{message.content}}</p>
+                        </div>
+                        <p>{{message.createdAt}} - <a href="">J'aime</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
