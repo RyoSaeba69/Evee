@@ -166,7 +166,12 @@ var AuthController = {
 
         // Upon successful login, send the user to the homepage were req.user
         // will available.
-        res.json(req.user);
+          User.findOne({id: req.user.id}).populateAll().exec(function(err, user){
+              if(user) {
+                  res.locals.user = req.user = user;
+                  res.json(user);
+              }
+          });
 
         //res.redirect('/');
       });
