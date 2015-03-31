@@ -25,21 +25,30 @@ var validator = require('validator');
 exports.register = function (req, res, next) {
   var email    = req.param('email')
     , username = req.param('username')
-    , password = req.param('password');
+    , password = req.param('password')
+    , password2 = req.param('password2');
 
   if (!email) {
-    req.flash('error', 'Error.Passport.Email.Missing');
+    req.flash('error', 'EMAIL_MISSING');
     return next(new Error('No email was entered.'));
   }
 
   if (!username) {
-    req.flash('error', 'Error.Passport.Username.Missing');
+    req.flash('error', 'USERNAME_MISSING');
     return next(new Error('No username was entered.'));
   }
 
   if (!password) {
-    req.flash('error', 'Error.Passport.Password.Missing');
+    req.flash('error', 'PASSWORDS_MISSING');
     return next(new Error('No password was entered.'));
+  }
+  if (!password2) {
+    req.flash('error', 'PASSWORDS_MISSING');
+    return next(new Error('No password was entered.'));
+  }
+  if (password != password2) {
+    req.flash('error', 'PASSWORDS_DONT_MATCH');
+    return next(new Error('Passwords doesnt match.'));
   }
 
   User.create({
@@ -49,9 +58,9 @@ exports.register = function (req, res, next) {
     if (err) {
       if (err.code === 'E_VALIDATION') {
         if (err.invalidAttributes.email) {
-          req.flash('error', 'Error.Passport.Email.Exists');
+          req.flash('error', 'EMAIL_EXISTS');
         } else {
-          req.flash('error', 'Error.Passport.User.Exists');
+          req.flash('error', 'USER_EXISTS');
         }
       }
 
@@ -65,7 +74,7 @@ exports.register = function (req, res, next) {
     }, function (err, passport) {
       if (err) {
         if (err.code === 'E_VALIDATION') {
-          req.flash('error', 'Error.Passport.Password.Invalid');
+          req.flash('error', 'PASSWORD_INVALID');
         }
 
         return user.destroy(function (destroyErr) {
