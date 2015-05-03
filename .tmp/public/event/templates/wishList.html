@@ -9,7 +9,7 @@
             <th class="taken">Déja pris ?</th>
             <tr ng-repeat="wish in WishList.wishes">
                 <td class="image" ng-bind="wish"></td>
-                <td class="name" ng-bind="wish"></td>
+                <td class="wish-name" ng-bind="wish.name"></td>
                 <td class="quantity" ng-bind="wish"></td>
                 <td class="taken" ng-bind="wish"></td>
             </tr>
